@@ -1,0 +1,23 @@
+<h1>Listagem de Mapas</h1>
+<hr>
+<table class="table table-striped">
+<thead>
+  <tr>
+      <th>ID</th>
+      <th>Mapas</th>
+       <th>Ações</th>
+  </tr>
+</thead>
+<tbody>
+  <% @map.each do |map| %>
+    <tr>
+      <td><%= map.id  %></td>
+      <td><%= map.name %> </td>
+      <td><a href = "/routes/map/<%= map.id.to_s %>"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;&nbsp;Ver Rotas</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/algorithms/new/ <%= map.id.to_s  %>"><i class="glyphicon glyphicon-usd"></i>&nbsp;&nbsp;Calcular Custo de Rotas</a></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+<div class="text-right">
+  <a href="/maps/new" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i>&nbsp;&nbsp;Adicionar Novo Mapa</a>
+</div>

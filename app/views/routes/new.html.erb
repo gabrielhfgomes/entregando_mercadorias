@@ -1,0 +1,33 @@
+<h1>Adicionar Nova Rota</h1>
+<hr>
+<%= form_for :route, url: routes_path do |f| %>
+
+<p>
+    <input type="hidden" id="route_map_id" name="route[map_id]"  value="<%= params[:id]%>" size="30" type="text">
+</p>
+
+<div class="row">
+  <div class="col-md-4 text-right"><label>Origem</label></div>
+  <div class="col-md-8"><%= f.text_field :source %></div>
+</div>
+<div class="row">
+  <div class="col-md-4 text-right"><label>Destino</label></div>
+  <div class="col-md-8"><%= f.text_field :target %></div>
+</div>
+<div class="row">
+  <div class="col-md-4 text-right"><label>Distancia</label></div>
+  <div class="col-md-8"><%= f.text_field :distance %></div>
+</div>
+<div class="row">
+  <div class="col-md-4 text-right"></div>
+  <div class="col-md-8 ">
+<br>
+<a href="/maps" class="btn btn-danger"><i class="glyphicon glyphicon-arrow-left"></i>&nbsp;&nbsp;Voltar</a>
+
+  <input name="commit" class="btn btn-success" value="Salvar Rota" type="submit">
+</div>
+</div>
+
+
+
+<% end %>

@@ -1,0 +1,42 @@
+<h1>Calcular Gastos</h1>
+<hr>
+<%= form_for :algorithm, url: '/algorithms/create/' do |f| %>
+
+<div class="row">
+<div class="col-md-6">
+  <p>
+    <input type="hidden" id="algorithm_map_id" name="algorithm[map_id]"  value="<%= params[:id]%>" size="30" type="text">
+  </p>
+  <p>
+    <label>Origem</label><br>
+    <%= f.text_field :form_source %>
+  </p>
+
+  <p>
+    <label>Destino</label><br>
+    <%= f.text_field :form_target %>
+  </p>
+
+</div>
+<div class="col-md-6">
+  <p>
+      <label>Autonomia</label><br>
+      <%= f.text_field :form_autonomy %>
+    </p>
+
+    <p>
+      <label>Valor da Gasolina</label><br>
+      <%= f.text_field :form_cost %>
+    </p>
+
+    <p>
+      <br>
+      <a href="/maps" class="btn btn-danger"><i class="glyphicon glyphicon-arrow-left"></i>&nbsp;&nbsp;Voltar</a>
+      <input name="commit" class="btn btn-success" value="Calcular Gasto" type="submit">
+    </p>
+</div>
+</div>
+
+
+
+<% end %>

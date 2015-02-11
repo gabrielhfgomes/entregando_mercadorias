@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  map_id: 1
+  form_source: 1
+  form_target: 1
+  form_autonomy: 1.5
+  form_cost: 1.5
+  form_total: 1.5
+
+two:
+  map_id: 1
+  form_source: 1
+  form_target: 1
+  form_autonomy: 1.5
+  form_cost: 1.5
+  form_total: 1.5

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  map_id: 1
+  source: MyString
+  target: MyString
+  distance: 1.5
+
+two:
+  map_id: 1
+  source: MyString
+  target: MyString
+  distance: 1.5

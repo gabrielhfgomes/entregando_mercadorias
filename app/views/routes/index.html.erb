@@ -1,0 +1,28 @@
+<h1>Listagem de Rotas</h1>
+<hr>
+<table class="table table-striped">
+<thead>
+  <tr>
+    <th>ID do Mapa</th>
+    <th>Origem</th>
+    <th>Destino</th>
+    <th>Distancia</th>
+  </tr>
+<thead>
+<tbody>
+  <% @routes.each do |route| %>
+    <tr>
+      <td><%= route.map_id %></td>
+      <td><%= route.source %></td>
+      <td><%= route.target %></td>
+      <td><%= route.distance %></td>
+      <td><a href="<%=route.map_id.to_s%>"></a><td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+<div class="text-right">
+  <a href="/maps" class="btn btn-danger"><i class="glyphicon glyphicon-arrow-left"></i>&nbsp;&nbsp;Voltar</a>
+  <a href="/routes/map/new/<%= params[:id] %>" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i>&nbsp;&nbsp;Adicionar Nova Rota</a>
+</div>

@@ -1,0 +1,4 @@
+<h3>Caminho : <%= @graph.dijkstra(@algorithm.form_source.to_i, @algorithm.form_target.to_i)[:path] %></h3>
+<h3>Custo : <%= @algorithm.form_total %></h3>
+
+  <a href="/maps" class="btn btn-danger"><i class="glyphicon glyphicon-arrow-left"></i>&nbsp;&nbsp;Voltar</a>

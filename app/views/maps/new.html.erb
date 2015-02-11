@@ -1,0 +1,22 @@
+<h1>Adicionar Novo Mapa</h1>
+<hr>
+<%= form_for :map, url: maps_path do |f| %>
+<div class="row">
+      <div class="col-md-6">
+            <p>
+                <%= f.label :name %><br>
+                <%= f.text_field :name %>
+              </p>
+      </div>
+      <div class="col-md-6">
+      <br>
+            <p>
+            <a href="/maps" class="btn btn-danger"><i class="glyphicon glyphicon-arrow-left"></i>&nbsp;&nbsp;Voltar</a>
+         <input name="commit"  class="btn btn-success" value="Salvar Mapa" type="submit">
+        </p>
+      </div>
+</div>
+
+
+
+<% end %>
