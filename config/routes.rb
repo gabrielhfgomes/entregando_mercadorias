@@ -1,5 +1,7 @@
 Project5::Application.routes.draw do
 
+
+  root  to: "index#index"
   resources :algorithms
   resources :maps
   resources :routes
@@ -7,7 +9,6 @@ Project5::Application.routes.draw do
   get '/routes/map/:id' => 'routes#index'
   get '/algorithms/new/:id' => 'algorithms#new'
   post '/algorithms/create/' => 'algorithms#create'
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
